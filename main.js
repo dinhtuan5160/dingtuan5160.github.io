@@ -20,7 +20,7 @@ $(document).on('click','.liUser',function () {
         playStream('localStream',stream);
         const call = peer.call($(this).attr('id'),stream);
         call.on('stream',remoteStream =>{
-            playStream('remoteStream',stream);
+            playStream('remoteStream',remoteStream);
         })
 
 
@@ -81,7 +81,7 @@ peer.on('call',call=>{
         playStream('localStream',stream);
         call.answer(stream);
         call.on('stream',remoteStream =>{
-            playStream('remoteStream',stream);
+            playStream('remoteStream',remoteStream);
         })
     })
 })
