@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>111</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="peer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+<body>
+<div id="videos">
+<ul id="ulUser">
+
+</ul>
+<!--<h3 id="idPeer">Your Id Peer : </h3>-->
+
+<video id="localStream" width="300" controls></video>
+<br /><br />
+<video id="remoteStream" width="300" controls></video>
+<br /><br />
+    <button id="btnCancelVideo">Cancel Call</button>
+</div>
+<!--<input type="text" id="remoteId">-->
+<!--<button type="button" id="btnCall">Call</button>-->
+<div id="signup">
+Username : <input type="text" id="txtUsername">
+<button type="button" id="btnSignUp">SignUp</button>
+</div>
+</body>
+<script src="main.js"></script>
+</html>
