@@ -1,6 +1,7 @@
-const socket = io("https://callvideo13042020.herokuapp.com/");
+const socket = io("https://project61342020.herokuapp.com/");
+// const socket = io("http://localhost:3006");
 $('#videos').hide();
-socket.on('hien_thi',data =>{
+socket.on('hien_thi',() =>{
     $('#videos').show();
     $('#signup').hide();
 });
@@ -10,6 +11,7 @@ socket.on('add_user',function (data) {
 })
 
 socket.on('danh_sach',function (data) {
+    $('li').remove();
     for(var i =0; i<data.length;i++){
         $('#ulUser').append("<li id= " + data[i].peerId + " class ='liUser'>"  + data[i].ten + "</li>");
     }
